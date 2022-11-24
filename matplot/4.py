@@ -1,0 +1,12 @@
+import matplotlib.pyplot as plt, numpy as np 
+x = np.arange(0, 50, 0.01) 
+y1 = np.sin(x * np.pi / 25) 
+y2 = np.sin(x * np.pi / 25 + np.pi / 2) 
+y3 = np.sin(x * np.pi / 25 - np.pi / 2) 
+y4 = np.sin(x * np.pi / 25 + np.pi) 
+plt.grid() 
+plt.plot(x, y1) 
+plt.plot(x, y2) 
+plt.plot(x, y3) 
+plt.plot(x, y4) 
+plt.show()

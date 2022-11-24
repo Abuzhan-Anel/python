@@ -1,0 +1,12 @@
+import matplotlib.pyplot as plt, numpy as np 
+x = np.array([i for i in range(1, 31)]) 
+np.random.shuffle(x) 
+print(x) 
+y = np.random.choice(x, size = 2200) 
+unique, counts = np.unique(y, return_counts=True) 
+coordinates = dict(zip(unique, counts)) 
+print(coordinates) 
+plt.grid() 
+plt.scatter(coordinates.keys(), coordinates.values(), marker = "^") 
+plt.plot(coordinates.keys(), coordinates.values()) 
+plt.show()
